@@ -1,5 +1,5 @@
-m=7000
-r=2000
+m=9000
+r=1000
 class ATM():
     def __init__(self,atmbalance,bankname):
         self.balance=atmbalance
