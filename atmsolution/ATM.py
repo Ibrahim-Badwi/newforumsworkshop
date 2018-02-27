@@ -1,18 +1,46 @@
-m=500
-r=778
-while r>0:
-    if r>=100:
-        print "give 100"
-        r=r-100
-    elif r>=50:
-        print "giv 50"
-        r=r-50
-    elif  r>= 10:
-         print "give 10"
-         r=r-10
-    elif r>=5:
-        print "give 5"
-        r=r-5
+
+
+def withdraw ( balance , request ):
+    print "----------------------------"
+    print "Request="+str(request)
+    print "CURRENT BALANCE="+str(balance)
+    if request > balance:
+        print("Can't give you all this money !!")
+        result=balance
+    elif request < 0:
+        print("More than zero plz!")
+        result=balance
     else:
-        print "give 1"
-        r=r-1
+        result=balance-request
+        while request>0:
+
+            if request>=100:
+                 print "give 100"
+                 request-=100
+            elif request>=50:
+                 print "give 50"
+                 request-=50
+            elif request>= 10:
+                 print "give 10"
+                 request-=10
+            elif request>=5:
+                 print "give 5"
+                 request-=5
+            else:
+                print "give"+str(request)
+                request=0
+    return result
+
+balance = 800
+balance=withdraw(balance,150)
+balance=withdraw(balance, 277)
+balance=withdraw(balance, 30)
+balance=withdraw(balance, 5)
+balance=withdraw(balance, 500)
+balance=withdraw(balance, 0.5)
+balance=withdraw(balance, -500)
+
+
+
+
+
