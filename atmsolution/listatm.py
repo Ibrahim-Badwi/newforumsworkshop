@@ -6,9 +6,6 @@ class ATM():
         self.withdrawal_list=[]
    
 
-   
-
-    
     def withdraw(self,request):
         self.print_sep() 
         print "CURRENT BALANCE="+str(self.balance)
@@ -49,6 +46,7 @@ atm1.withdraw(674)
 atm1.withdraw(700)
 atm1.withdraw(170)
 atm1.show_withdrawal()
+
 atm2.withdraw(1000)
 atm2.withdraw(700)
 atm2.withdraw(113)
